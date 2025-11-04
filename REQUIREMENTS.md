@@ -117,4 +117,81 @@ The system automatically converts the payment to a unified base currency and upd
 | 22. | The system shall comply with GDPR. | Non-Functional | System |
 | 23. | The interface should be user-friendly and easy to navigate for all users. | Non-Functional | User |
 
+## 3. Functional Specifications (Role 4 – Structured Specification Developer)
+
+### Specification ID-F02 — Manage Income and Expense Entries
+
+- **Function:** Manage Income and Expense Entries  
+- **Description:** Allows users to add, edit, and delete income or expense records for personal finance management.  
+- **Inputs:** Transaction type (income/expense), amount, category, date, and optional description.  
+- **Source:** User input through the transaction entry form.  
+- **Outputs:** Updated dashboard summaries and confirmation messages for successful operations.  
+- **Destination:** User’s transaction database and dashboard summary charts.  
+- **Action:** Add, edit, or delete a transaction record based on user input; automatically update dashboard summaries.  
+- **Requires:** User must be logged in; database connection available for write operations.  
+- **Preconditions:** Input fields must not be empty or invalid (e.g., negative amount).  
+- **Postconditions:** Transaction record updated in database; dashboard reflects current financial data.  
+- **Side Effects:** Incorrect data entry could lead to inaccurate financial summaries.  
+
+---
+
+### Specification ID-F14 — Automatic Currency Conversion System
+
+- **Function:** Shared Expense Management  
+- **Description:** Enables users to manage and share expenses among a group, ensuring accurate split and balance tracking.  
+- **Inputs:** Group ID or member list, expense amount, category, date, and member contribution percentages.  
+- **Source:** User input from group expense interface.  
+- **Outputs:** Updated balances and notifications for all group members.  
+- **Destination:** Group expense records in database and user dashboards.  
+- **Action:** Store or update shared expenses, calculate individual shares, and notify group members of updates.  
+- **Requires:** All group members must have valid accounts; shared group must exist in the system.  
+- **Preconditions:** User is a member of an existing shared group.  
+- **Postconditions:** Shared expense successfully saved and synchronized across all users’ dashboards.  
+- **Side Effects:** Potential synchronization delay or mismatch in group data if connection fails.  
+
+---
+
+### Specification ID-F08 — Shared Expense Management
+
+- **Function:** Shared Expense Management  
+- **Description:** Enables users to manage and share expenses among a group, ensuring accurate split and balance tracking.  
+- **Inputs:** Group ID or member list, expense amount, category, date, and member contribution percentages.  
+- **Source:** User input from group expense interface.  
+- **Outputs:** Updated balances and notifications for all group members.  
+- **Destination:** Group expense records in database and user dashboards.  
+- **Action:** Store or update shared expenses, calculate individual shares, and notify group members of updates.  
+- **Requires:** All group members must have valid accounts; shared group must exist in the system.  
+- **Preconditions:** User is a member of an existing shared group.  
+- **Postconditions:** Shared expense successfully saved and synchronized across all users’ dashboards.  
+- **Side Effects:** Potential synchronization delay or mismatch in group data if connection fails.  
+
+## 4. Prioritized Requirement List
+
+| ID  | Requirement | Actor | Type | Priority | Justification |
+| --- | ----------- | ----- | ---- | -------- | ------------- |
+| F1  | Users can login, logout, register securely | User | Functional | M | Core for user authentication; system cannot function without secure accounts. |
+| F2  | Add, edit, delete income/expense entries | User | Functional | M | Core feature for personal finance tracking; essential for main app goal. |
+| F3  | Create, update, delete user profile | User | Functional | N | Important for personalization, but system can work with default profile initially. |
+| F4  | AI automatically categorizes expenses | System | Functional | N | Adds value via automation, not critical for minimum viable product (MVP). |
+| F5  | Store transaction details | System | Functional | M | Fundamental; cannot track or analyze finances without data storage. |
+| F6  | Dashboards with balance, income/expense summaries & charts | System | Functional | M | Key for visualization and clarity; aligns directly with project goals. |
+| F7  | Filter transactions by date/category | User | Functional | N | Improves usability but core functionality can exist without it initially. |
+| F8  | Manage shared expenses with other users | System | Functional | M | Core differentiator of Lunix vs simple expense trackers. |
+| F9  | Split shared bills and update members | System | Functional | M | Essential for transparency and group tracking; central project goal. |
+| F10 | Export data to Excel/PDF | User | Functional | N | Useful for reporting but not essential for basic operation. |
+| F11 | Generate financial summaries with AI | System | Functional | N | Adds insights; can be implemented after basic tracking is working. |
+| F12 | Reminders/notifications for pending/overdue payments | System | Functional | N | Improves usability; nice-to-have for MVP. |
+| F13 | Support multiple currencies | System | Functional | N | Valuable for global users, but MVP can start with one currency. |
+| F14 | Automatic currency conversion | System | Functional | S | Extra feature; high complexity, low priority for initial release. |
+| F15 | Generate/display digital invoices | System | Functional | N | Important for company users; not mandatory for personal use MVP. |
+| F16 | Users can override AI categorization | User | Functional | N | Adds control for advanced users; secondary feature. |
+| F17 | Real-time sync across shared users | System | Functional | M | Critical for accuracy and trust in shared/group features. |
+| NF1 | Daily data backup | System | Nonfunctional | M | Ensures data safety; essential for system reliability. |
+| NF2 | Responsive and functional across devices | User | Nonfunctional | M | UX requirement; essential for accessibility. |
+| NF3 | Dashboard updates within 10s | System | Nonfunctional | N | Performance improvement; important but not core MVP. |
+| NF4 | AI accuracy ≥ 85% | System | Nonfunctional | N | Nice-to-have for automation credibility; initial AI can be less accurate. |
+| NF5 | GDPR compliance | System | Nonfunctional | M | Mandatory for legal and ethical compliance. |
+| NF6 | User-friendly interface | User | Nonfunctional | M | Critical for adoption and usability. |
+
+
 
