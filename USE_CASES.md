@@ -1,1 +1,2 @@
 
+[/assets/firs.png]
