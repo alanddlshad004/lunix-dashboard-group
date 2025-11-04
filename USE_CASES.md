@@ -78,4 +78,5 @@ Lunix Smart Finance allows users to manage personal and shared expenses, track s
 ---
  the use case lucid link https://lucid.app/lucidchart/9cc262c0-c164-4bfa-bfd8-162377607a17/edit?viewport_loc=-1947%2C-2890%2C14664%2C6696%2C0_0&invitationId=inv_49600a68-53f2-4e11-946e-b6480374f028
 
- [/assets/firs.png] 
+[![UML Diagram](/assets/firs.png)](/assets/firs.png)
+
