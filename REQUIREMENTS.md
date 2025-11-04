@@ -118,5 +118,3 @@ The system automatically converts the payment to a unified base currency and upd
 | 23. | The interface should be user-friendly and easy to navigate for all users. | Non-Functional | User |
 
 
-
-**End of Document**
